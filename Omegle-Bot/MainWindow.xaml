@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ListView x:Name="ListViewProxies" HorizontalAlignment="Left" Height="100" Margin="128,150,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.93,0.155">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="ButtonAddProxy" Content="Button" HorizontalAlignment="Left" Margin="96,298,0,0" VerticalAlignment="Top" Click="ButtonAddProxy_Click" Width="75"/>
+
     </Grid>
 </Window>
