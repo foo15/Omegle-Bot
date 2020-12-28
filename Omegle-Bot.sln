@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omegle-Bot", "Omegle-Bot\Omegle-Bot.csproj", "{840AC809-365F-45C9-91F5-2E7736CC6179}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{840AC809-365F-45C9-91F5-2E7736CC6179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{840AC809-365F-45C9-91F5-2E7736CC6179}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{840AC809-365F-45C9-91F5-2E7736CC6179}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{840AC809-365F-45C9-91F5-2E7736CC6179}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01539102-3CA8-4610-999E-354A0C14EB8D}
+	EndGlobalSection
+EndGlobal
