@@ -20,13 +20,17 @@ namespace Omegle_Bot
         public static bool proxiesEnabled;
 
         public ChatType chatType;
-        public HtmlDocument document;
-        public Proxy proxy;
+        public HttpClient client;
+        public NetworkCredential credentials { get; private set; }
 
         public void Connect()
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://www.omegle.com/");
-            request.Proxy = proxiesEnabled ? new WebProxy(proxy.HOST.ToString(), proxy.PORT)  : null;
+            throw new NotImplementedException();
+        }
+
+        public void Disconnect()
+        {
+            throw new NotImplementedException();
         }
 
         public WebDriver(ChatType type = ChatType.TextChat)

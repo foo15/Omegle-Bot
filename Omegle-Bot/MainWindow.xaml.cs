@@ -4,19 +4,21 @@ using System.Windows;
 using Microsoft.Win32;
 using System.IO;
 using System.Collections.Generic;
+using System.Windows.Input;
 using Omegle_Bot.Helpers;
+using MahApps.Metro;
 
 namespace Omegle_Bot
 {
 
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         public MainWindow()
         {
             InitializeComponent();
         }
         
-        private void ButtonAddProxy_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_AddProxies_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.DefaultExt = ".txt";

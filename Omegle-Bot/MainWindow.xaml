@@ -1,20 +1,31 @@
-﻿<Window x:Class="Omegle_Bot.MainWindow"
+﻿<mah:MetroWindow x:Class="Omegle_Bot.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:Omegle_Bot"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        ResizeMode="NoResize"
+        GlowBrush="Black"
+        Title="Omegle Bot" Height="450" Width="800">
+
     <Grid>
-        <ListView x:Name="ListViewProxies" HorizontalAlignment="Left" Height="133" Margin="96,160,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.93,0.155">
+        <ListView x:Name="ListViewProxies" Background="#FF0F0F0F" Foreground="White" HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="138" RenderTransformOrigin="0.93,0.155">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="MenuItem_CopyProxies" Header="Copy Proxies to Clipboard"/>
+                    <MenuItem x:Name="MenuItem_AddProxy" Header="Add Proxy List" Click="MenuItem_AddProxies_Click"/>
+                    <MenuItem x:Name="MenuItem_ClearProxies" Header="Clear Proxies"/>
+
+                </ContextMenu>
+            </ListBox.ContextMenu>
+
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Proxy List" Width="200"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="ButtonAddProxy" Content="Button" HorizontalAlignment="Left" Margin="96,298,0,0" VerticalAlignment="Top" Click="ButtonAddProxy_Click" Width="75"/>
-
     </Grid>
-</Window>
+</mah:MetroWindow>
