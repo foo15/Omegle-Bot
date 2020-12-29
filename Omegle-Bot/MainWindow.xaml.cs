@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Net;
 using System.Windows;
 using Microsoft.Win32;
 using System.IO;
-using Omegle_Bot.Utils;
+using System.Collections.Generic;
+using Omegle_Bot.Helpers;
 
 namespace Omegle_Bot
 {
@@ -13,10 +15,9 @@ namespace Omegle_Bot
         {
             InitializeComponent();
         }
-
+        
         private void ButtonAddProxy_Click(object sender, RoutedEventArgs e)
         {
-
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.DefaultExt = ".txt";
             dlg.Filter = "Proxy List (.txt)|*.txt";
@@ -26,11 +27,22 @@ namespace Omegle_Bot
             if (result == true)
             {
                 string[] lines = File.ReadAllLines(dlg.FileName);
+                
+                List<Proxy> proxyList = new List<Proxy>();
 
                 foreach (String line in lines)
                 {
+                    IPAddress host;
+                    int port;
 
+                    String[] s = line.Split((char)':');
+                    
+                    if (IPAddress.TryParse(s[1], out host) && Int32.TryParse(s[2], out port))
+                    {
+                        proxyList.Add(new Proxy(host, port));
+                    }
                 }
+                WebDriver.ProxyList = proxyList;
             }
         }
     }

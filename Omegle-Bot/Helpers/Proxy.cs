@@ -2,22 +2,22 @@
 using System.Net;
 using System.Collections.Generic;
 
-namespace Omegle_Bot.Utils
+namespace Omegle_Bot.Helpers
 {
     public sealed class Proxy
     {
-        public IPAddress IP_ADDRESS { get; private set; }
+        public IPAddress HOST { get; private set; }
 
         public int PORT { get; private set; }
 
         public Proxy(IPAddress ip, int port)
         {
-            IP_ADDRESS = ip;
+            HOST = ip;
             PORT = port;
         }
         public override string ToString()
         {
-            return IP_ADDRESS.ToString() + ":" + PORT.ToString();
+            return HOST.ToString() + ":" + PORT.ToString();
         }
     }
 }
