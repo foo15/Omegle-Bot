@@ -1,2 +1,2 @@
 # Omegle-Bot
-an omegle bot written in C#, WPF and JavaScript
+an omegle bot written in C# and JavaScript
